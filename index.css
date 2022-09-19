@@ -13,7 +13,7 @@ body{
     margin: 20px auto;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3,auto);
     grid-template-areas: "encabezado encabezado encabezado encabezado"
                          "leftbar contenido contenido contenido"
@@ -22,7 +22,6 @@ body{
 .contenedor > div,
 .contenedor .encabezado,
 .contenedor .contenido,
-.contenedor .leftbar,
 .contenedor .pie {
     padding: 20px;
     border-radius: 4px;
@@ -31,15 +30,6 @@ body{
     background-color: blue;
     color: white;
     grid-area: encabezado;
-}
-.contenedor .leftbar{
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: leftbar; 
-
 }
 .contenedor .contenido{
     background-color: white;
@@ -54,7 +44,6 @@ body{
 @media screen and (max-width: 768px){
     .contenedor{
         grid-template-areas: "encabezado encabezado encabezado"
-                             "leftbar leftbar leftbar"
                              "contenido contenido contenido"
                              "pie pie pie" ;
     }
@@ -63,9 +52,7 @@ body{
 @media screen and (max-width: 450px){
     .contenedor{
         grid-template-areas: "encabezado encabezado encabezado"
-                             "leftbar leftbar leftbar"
                              "contenido contenido contenido"
-                             "leftbar leftbar leftbar"
                              "pie pie pie" ;
     }
 }
